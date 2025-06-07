@@ -8,7 +8,7 @@ on:
 
 # trabalhos e tarefas dentor do pipeline: jobs
 jobs:
-  e2e-tests:
+  testes-unitarios:
     # available images https://github.com/actions/runner-images
     # maquina que o job vai executar
     runs-on: ubuntu-latest
