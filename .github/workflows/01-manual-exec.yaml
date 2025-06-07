@@ -1,0 +1,28 @@
+# nome da pipeline
+name: 'Execucao Manual'
+
+#regras de disparo(triggers)
+on:
+  #gatilho de execucao manual: workflow_dispatch
+  workflow_dispatch:
+
+# trabalhos e tarefas dentor do pipeline: jobs
+jobs:
+  e2e-tests:
+    # available images https://github.com/actions/runner-images
+    # maquina que o job vai executar
+    runs-on: ubuntu-latest
+
+    #passos do script de build
+    steps:
+      #clone do projeto
+      - uses: actions/checkout@v4
+
+      #instalacao do node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      #executar os testes de unidade
+      - name: Executando testes de unidade
+        run: npx mocha testes/trabalho-final.js

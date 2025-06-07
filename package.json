@@ -5,7 +5,7 @@
   "main": "trabalho-final.js",
   "type": "module",
   "scripts": {
-    "executeTestes": "npx mocha testes/trabalho-final.js "
+    "executeTestes": "npx mocha testes/trabalho-final.js"
   },
   "keywords": [],
   "author": "",
